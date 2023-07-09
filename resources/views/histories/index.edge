@@ -2,12 +2,20 @@
 
 @section('content')
   <h1>Historias</h1>
-  <table>
+  <table class="table">
     <thead>
       <tr>
-        <th>ID</th>
-        <th>Nombre</th>
-        <th>Apellidos</th>
+        <th>Id</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Cédula</th>
+          <th>Nacimiento</th>
+          <th>Correo</th>
+          <th>Celular</th>
+          <th>Filiación</th>
+          <th>Profesión</th>
+          <th>Dirección</th>
+          <th>Nacionalidad</th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +24,14 @@
           <td>{{ history.id }}</td>
           <td>{{ history.firstName }}</td>
           <td>{{ history.lastName }}</td>
+          <td>{{ history.cedula }}</td>
+          <td>{{ history.birthday }}</td>
+          <td>{{ history.email }}</td>
+          <td>{{ history.cellphone }}</td>
+          <td>{{ history.filiation }}</td>
+          <td>{{ history.profession }}</td>
+          <td>{{ history.address }}</td>
+          <td>{{ history.nationality }}</td>
         </tr>
       @end
     </tbody>
