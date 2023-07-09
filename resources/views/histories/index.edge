@@ -1,0 +1,23 @@
+@layout('layouts/frame')
+
+@section('content')
+  <h1>Historias</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+      </tr>
+    </thead>
+    <tbody>
+      @each(history in histories)
+        <tr>
+          <td>{{ history.id }}</td>
+          <td>{{ history.firstName }}</td>
+          <td>{{ history.lastName }}</td>
+        </tr>
+      @end
+    </tbody>
+  </table>
+@end

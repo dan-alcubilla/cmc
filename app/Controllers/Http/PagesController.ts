@@ -5,11 +5,11 @@ export default class PagesController {
         return view.render('welcome')
     }
 
-    public historias({ view }: HttpContextContract) {
-        return view.render('historias')
-    }
+    // public historias({ view }: HttpContextContract) {
+    //     return view.render('historias')
+    // }
 
-    public consultas({ view }: HttpContextContract) {
-        return view.render('consultas')
-    }
+    // public consultas({ view }: HttpContextContract) {
+    //     return view.render('consultas')
+    // }
 }
