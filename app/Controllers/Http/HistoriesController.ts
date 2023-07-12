@@ -6,4 +6,12 @@ export default class HistoriesController {
         const histories = await History.all()
         return view.render('histories/index', {histories})
     }
+
+    public async form ({ view }: HttpContextContract) {
+        return view.render('histories/store')
+    }
+
+    // public async store ({ request }: HttpContextContract) {
+
+    // }
 }

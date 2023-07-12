@@ -23,5 +23,6 @@ import Route from '@ioc:Adonis/Core/Route'
 Route.get('/', 'PagesController.home')
 
 Route.get('/historias', 'HistoriesController.index').as('historias')
+Route.get('/historias/crear', 'HistoriesController.form')
 
 Route.get('/consultas', 'PagesController.consultas').as('consultas')
