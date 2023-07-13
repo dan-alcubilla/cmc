@@ -24,5 +24,6 @@ Route.get('/', 'PagesController.home')
 
 Route.get('/historias', 'HistoriesController.index').as('historias')
 Route.get('/historias/crear', 'HistoriesController.form')
+Route.post('/historias/crear/form','HistoriesController.store')
 
 Route.get('/consultas', 'PagesController.consultas').as('consultas')
