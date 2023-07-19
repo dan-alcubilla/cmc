@@ -8,6 +8,7 @@ export default class HistoriesController {
   }
 
   public async form ({ view }: HttpContextContract) {
+    // const history = await History.findOrFail(3)
     return view.render('histories/store')
   }
 
@@ -24,6 +25,30 @@ export default class HistoriesController {
       address: request.input('address'),
       nationality: request.input('nationality'),
     })
+
+    return response.redirect('/historias')
+  }
+
+  public async edit ({ view, params }: HttpContextContract) {
+    const history = await History.findOrFail(params.id)
+
+    return view.render('histories/edit', {history})
+  }
+
+  public async update ({ request, response, params }: HttpContextContract) {
+    const history = await History.findOrFail(params.id)
+
+    history.firstName = request.input('firstName')
+    history.lastName = request.input('lastName')
+    history.cedula = request.input('cedula')
+    history.birthday = request.input('birthday')
+    history.email = request.input('email')
+    history.cellphone = request.input('cellphone')
+    history.filiation = request.input('filiation')
+    history.profession = request.input('profession')
+    history.address = request.input('address')
+    history.nationality = request.input('nationality')
+    await history.save()
 
     return response.redirect('/historias')
   }

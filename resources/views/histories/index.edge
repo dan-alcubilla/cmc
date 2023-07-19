@@ -57,7 +57,7 @@
       @each(history in histories)
         <tr>
           <td>{{ history.id }}</td>
-          <td>{{ history.firstName }}</td>
+          <td><a href="/historias/editar/{{history.id}}">{{ history.firstName }}</a></td>
           <td>{{ history.lastName }}</td>
           <td>{{ history.cedula }}</td>
           <td>{{ history.birthday }}</td>

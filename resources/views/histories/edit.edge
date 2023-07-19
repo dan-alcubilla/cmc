@@ -1,0 +1,85 @@
+@layout('layouts/frame')
+
+@section('content')
+    <form action={{`/historias/editar/${history.id}?_method=PUT`}} method="post">
+        {{ csrfField() }}
+        <div class="field">
+            <label class="label">Nombres</label>
+            <div class="control">
+                <input class="input" type="text" name="firstName" value="{{history.firstName}}">
+            </div>
+        </div>
+    
+        <div class="field">
+            <label class="label">Apellidos</label>
+            <div class="control">
+                <input class="input" type="text" name="lastName" value="{{history.lastName}}">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Cédula</label>
+            <div class="control">
+                <input class="input" type="text" name="cedula" placeholder="Text input" value="{{history.cedula}}">
+            </div>
+        </div>
+    
+        <div class="field">
+            <label class="label">Fecha de Nacimiento</label>
+            <div class="control">
+                <input class="input" type="text" name="birthday" placeholder="Text input" value="{{history.birthday}}">
+            </div>
+        </div>
+    
+        <div class="field">
+            <label class="label">Correo Electrónico</label>
+            <div class="control">
+                <input class="input" type="email" name="email" placeholder="Email input" value="{{history.email}}">
+            </div>
+        </div>
+    
+        <div class="field">
+            <label class="label">Celular</label>
+            <div class="control">
+                <input class="input" type="text" name="cellphone" placeholder="Text input" value="{{history.cellphone}}">
+            </div>
+        </div>
+    
+        <div class="field">
+            <label class="label">Filiación</label>
+            <div class="control">
+                <input class="input" type="text" name="filiation" placeholder="Text input" value="{{history.filiation}}">
+            </div>
+        </div>
+    
+        <div class="field">
+            <label class="label">Profesión</label>
+            <div class="control">
+                <input class="input" type="text" name="profession" placeholder="Text input" value="{{history.profession}}">
+            </div>
+        </div>
+    
+        <div class="field">
+            <label class="label">Dirección</label>
+            <div class="control">
+                <input class="input" type="text" name="address" placeholder="Text input" value="{{history.address}}">
+            </div>
+        </div>
+    
+        <div class="field">
+            <label class="label">Nacionalidad</label>
+            <div class="control">
+                <input class="input" type="text" name="nationality" placeholder="Text input" value="{{history.nationality}}">
+            </div>
+        </div>
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button type="submit" class="button is-link">Actualizar</button>
+            </div>
+            <div class="control">
+                <button class="button is-link is-light">Cancelar</button>
+            </div>
+        </div>
+    </form>
+@end
