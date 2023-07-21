@@ -54,13 +54,17 @@
       </tr>
     </thead>
     <tbody>
+      @each(item in dates)
+        <p>{{item}}</p>
+      @end
+      @set('date', {dates})
       @each(history in histories)
         <tr>
           <td>{{ history.id }}</td>
-          <td><a href="/historias/editar/{{history.id}}">{{ history.firstName }}</a></td>
+          <td><a href="/historias/editar/{{history.id}}" >{{ history.firstName }}</a></td>
           <td>{{ history.lastName }}</td>
           <td>{{ history.cedula }}</td>
-          <td>{{ history.birthday }}</td>
+          <td>{{ history.birthday.toLocaleDateString('es') }}</td>
           <td>{{ history.email }}</td>
           <td>{{ history.cellphone }}</td>
           <td>{{ history.filiation }}</td>

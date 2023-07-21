@@ -4,11 +4,11 @@ import History from 'App/Models/History'
 export default class HistoriesController {
   public async index ({ view }: HttpContextContract) {
     const histories = await History.all()
+
     return view.render('histories/index', {histories})
   }
 
   public async form ({ view }: HttpContextContract) {
-    // const history = await History.findOrFail(3)
     return view.render('histories/store')
   }
 
