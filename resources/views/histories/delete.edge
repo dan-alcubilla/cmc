@@ -1,0 +1,18 @@
+@layout('layouts/frame')
+
+@section('content')
+    <form action={{`/historias/borrar/${history.id}?_method=DELETE`}} method="post">
+        {{ csrfField() }}
+        
+        <h1>{{`¿Realmente desea borrar el registro de ${history.firstName}?`}}</h1>
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button type="submit" class="button is-link">Borrar</button>
+            </div>
+            <div class="control">
+                <button type="submit" class="button is-link is-light" onclick="window.location.href='/historias'">Cancelar</button>
+            </div>
+        </div>
+    </form>
+@end

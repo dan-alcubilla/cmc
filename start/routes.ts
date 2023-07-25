@@ -27,5 +27,7 @@ Route.get('/historias/crear', 'HistoriesController.form')
 Route.post('/historias/crear/form','HistoriesController.store')
 Route.get('/historias/editar/:id','HistoriesController.edit')
 Route.put('/historias/editar/:id', 'HistoriesController.update')
+Route.get('/historias/borrar/:id','HistoriesController.destroyHistory')
+Route.delete('/historias/borrar/:id', 'HistoriesController.destroy')
 
 Route.get('/consultas', 'PagesController.consultas').as('consultas')

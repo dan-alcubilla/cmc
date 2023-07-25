@@ -50,7 +50,9 @@
           <th>Filiación</th>
           <th>Profesión</th>
           <th>Dirección</th>
-          <th>Nacionalidad</th>
+          {{--  <th>Nacionalidad</th>  --}}
+          <th></th>
+          <th></th>
       </tr>
     </thead>
     <tbody>
@@ -70,7 +72,9 @@
           <td>{{ history.filiation }}</td>
           <td>{{ history.profession }}</td>
           <td>{{ history.address }}</td>
-          <td>{{ history.nationality }}</td>
+          {{--  <td>{{ history.nationality }}</td>  --}}
+          <td><button class="button is-small is-warning" type="button" onclick="window.location.href='/historias/editar/{{history.id}}'">Editar</button></td>
+          <td><button class="button is-small is-danger" type="button" onclick="window.location.href='/historias/borrar/{{history.id}}'">Borrar</button></td>
         </tr>
       @end
     </tbody>

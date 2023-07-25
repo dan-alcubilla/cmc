@@ -6,86 +6,139 @@
         <div class="field">
             <label class="label">Nombres</label>
             <div class="control">
-                <input class="input" type="text" name="firstName" placeholder="Text input">
+                <input class="input {{flashMessages.has('errors.firstName') ? 'is-danger' : ''}}" type="text" name="firstName" placeholder="Ingrese el nombre del paciente">
             </div>
         </div>
+
+        @if(flashMessages.has('errors.firstName'))
+            <p class="help is-danger">
+                {{flashMessages.get('errors.firstName', )}}
+            </p>
+        @end
     
         <div class="field">
             <label class="label">Apellidos</label>
             <div class="control">
-                <input class="input" type="text" name="lastName" placeholder="Text input">
+                <input class="input {{flashMessages.has('errors.lastName') ? 'is-danger' : ''}}" type="text" name="lastName" placeholder="Ingrese el apellido del paciente">
             </div>
         </div>
+
+        @if(flashMessages.has('errors.lastName'))
+            <p class="help is-danger">
+                {{flashMessages.get('errors.lastName', )}}
+            </p>
+        @end
     
         <div class="field">
             <label class="label">Cédula</label>
             <div class="control">
-                <input class="input" type="text" name="cedula" placeholder="Text input">
+                <input class="input {{flashMessages.has('errors.cedula') ? 'is-danger' : ''}}" type="text" name="cedula" placeholder="Ingrese el número">
             </div>
         </div>
+
+        @if(flashMessages.has('errors.cedula'))
+            <p class="help is-danger">
+                {{flashMessages.get('errors.cedula', )}}
+            </p>
+        @end
     
         <div class="field">
             <label class="label">Fecha de Nacimiento</label>
             <div class="control">
-                <input class="input" type="date" name="birthday" >
+                <input class="input {{flashMessages.has('errors.birthday') ? 'is-danger' : ''}}" type="date" name="birthday">
             </div>
         </div>
+
+        @if(flashMessages.has('errors.birthday'))
+            <p class="help is-danger">
+                {{flashMessages.get('errors.birthday', )}}
+            </p>
+        @end
     
         <div class="field">
             <label class="label">Correo Electrónico</label>
-            <div class="control has-icons-left has-icons-right">
-                <input class="input is-danger" type="email" name="email" placeholder="Email input" value="ejemplo@.com">
-                <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
-                </span>
-                <span class="icon is-small is-right">
-                    <i class="fas fa-exclamation-triangle"></i>
-                </span>
+            <div class="control">
+                <input class="input {{flashMessages.has('errors.email') ? 'is-danger' : ''}}" type="email" name="email" placeholder="Ingrese un correo electrónico valido ejemplo@correo.com">
             </div>
-            <!-- <p class="help is-danger">This email is invalid</p> -->
         </div>
+
+        @if(flashMessages.has('errors.email'))
+            <p class="help is-danger">
+                {{flashMessages.get('errors.email', )}}
+            </p>
+        @end
     
         <div class="field">
             <label class="label">Celular</label>
             <div class="control">
-                <input class="input" type="text" name="cellphone" placeholder="Text input">
+                <input class="input {{flashMessages.has('errors.cellphone') ? 'is-danger' : ''}}" type="text" name="cellphone" placeholder="Ingrese número de celular">
             </div>
         </div>
+
+        @if(flashMessages.has('errors.cellphone'))
+            <p class="help is-danger">
+                {{flashMessages.get('errors.cellphone', )}}
+            </p>
+        @end
     
         <div class="field">
             <label class="label">Filiación</label>
             <div class="control">
-                <input class="input" type="text" name="filiation" placeholder="Text input">
+                <input class="input {{flashMessages.has('errors.cellphone') ? 'is-danger' : ''}}" type="text" name="filiation" placeholder="Ingrese la filiación correspondiente">
             </div>
         </div>
+
+        @if(flashMessages.has('errors.filiation'))
+            <p class="help is-danger">
+                {{flashMessages.get('errors.filiation', )}}
+            </p>
+        @end
     
         <div class="field">
             <label class="label">Profesión</label>
             <div class="control">
-                <input class="input" type="text" name="profession" placeholder="Text input">
+                <input class="input {{flashMessages.has('errors.profession') ? 'is-danger' : ''}}" type="text" name="profession" placeholder="Text input">
             </div>
         </div>
+
+        @if(flashMessages.has('errors.profession'))
+            <p class="help is-danger">
+                {{flashMessages.get('errors.profession', )}}
+            </p>
+        @end
     
         <div class="field">
             <label class="label">Dirección</label>
             <div class="control">
-                <input class="input" type="text" name="address" placeholder="Text input">
+                <input class="input {{flashMessages.has('errors.address') ? 'is-danger' : ''}}" type="text" name="address" placeholder="Text input">
             </div>
         </div>
+
+        @if(flashMessages.has('errors.address'))
+            <p class="help is-danger">
+                {{flashMessages.get('errors.address', )}}
+            </p>
+        @end
     
         <div class="field">
             <label class="label">Nacionalidad</label>
             <div class="control">
-                <input class="input" type="text" name="nationality" placeholder="Text input">
+                <input class="input {{flashMessages.has('errors.nationality') ? 'is-danger' : ''}}" type="text" name="nationality" placeholder="Text input">
             </div>
         </div>
+
+        @if(flashMessages.has('errors.nationality'))
+            <p class="help is-danger">
+                {{flashMessages.get('errors.nationality', )}}
+            </p>
+        @end
     
         <div class="field is-grouped">
             <div class="control">
                 <button type="submit" class="button is-link">Crear</button>
             </div>
             <div class="control">
-                <button type="submit" class="button is-link is-light" onclick="window.history.back(-1)">Cancelar</button>
+                <button type="submit" class="button is-link is-light" onclick="window.location.href='/historias'">Cancelar</button>
             </div>
         </div>
     </form>
