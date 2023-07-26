@@ -1,7 +1,12 @@
 import { DateTime } from 'luxon'
-import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, column, HasMany, hasMany } from '@ioc:Adonis/Lucid/Orm'
+import Consultation from './Consultation'
 
 export default class History extends BaseModel {
+  @hasMany(() => Consultation)
+
+  public consultations: HasMany<typeof Consultation>
+
   @column({ isPrimary: true })
   public id: number
 
